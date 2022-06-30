@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Metaverse POC</title>
+<script defer src="js/bundleName.js"></script></head>
+<body>
+<canvas id="gameCanvas">
+
+</canvas>
+<!--&lt;!&ndash;<select id="availableCameras"></select>&ndash;&gt;-->
+<!--<select id="videoSource"></select>-->
+<!--<select id="audioSource"></select>-->
+<div class="videos"></div>
+<div id="hud">
+    <div class="spacesMenu">
+        <h3 id="spaceTitle"></h3>
+        <ul id="spaceList">
+
+        </ul>
+    </div>
+    <div class="peopleMenu">
+        <h3 id="peopleTitle"></h3>
+        <ul id="peopleList">
+
+        </ul>
+    </div>
+<!--    <div class="remoteVideo">-->
+<!--        <video id="remoteVideo" autoplay playsinline controls="false"></video>-->
+<!--    </div>-->
+
+    <div id="iconMenu">
+        <div id="homeBtn" class="button active"><i class="fas fa-home"></i></div>
+        <div id="profileBtn" class="button"><i class="fas fa-user"></i></div>
+    </div>
+    <div class="inputMenu">
+        <ul style="list-style: none">
+            <li><div id="stopVideo" class="button"><i class="fas fa-video"></i></div></li>
+            <li><div id="muteButton" class="button"><i class="fas fa-microphone"></i></div></li>
+        </ul>
+    </div>
+    <div class="bottomRightMenu">
+        <ul style="list-style: none">
+            <li><div id="locationBtn" class="button" ><i class="fas fa-location-dot"></i></div></li>
+            <li><div id="infoBtn" class="button" ><i class="fas fa-info-circle"></i></div></li>
+            <li><div id="settingsBtn" class="button" ><i class="fas fa-cogs"></i></div></li>
+            <li><div id="fullscreenBtn" class="button" ><i class="fas fa-expand"></i></div></li>
+        </ul>
+    </div>
+</div>
+<div id="video">
+    <video id="localVideo" autoplay playsinline controls="false"></video>
+    <div class="muted"></div>
+</div>
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+</body>
+</html>
