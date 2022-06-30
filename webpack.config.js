@@ -7,7 +7,7 @@ module.exports = {
     entry: path.resolve(appDirectory, "src/App.ts"), //path to the main .ts file
     output: {
         filename: "js/bundleName.js", //name for the js file that is created/compiled in memory
-        clean: true,
+        // clean: true,
     },
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
