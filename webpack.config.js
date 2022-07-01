@@ -15,6 +15,7 @@ module.exports = {
     },
     devServer: {
         host: "0.0.0.0",
+        allowedHosts: "all",
         port: 8080, //port that we're using for local host (localhost:8080)
         static: path.resolve(__dirname, "public"), //tells webpack to serve from the public folder
         hot: true,
@@ -48,7 +49,5 @@ module.exports = {
             template: path.resolve(__dirname, "public/index.html"),
         })
     ],
-    // mode: "development",
-    mode: "production",
-    devtool: 'source-map',
+    mode: "development",
 };
