@@ -34,7 +34,7 @@
     "ws": "^8.5.0"
   },
   "scripts": {
-    "build": "webpack",
+    "build": "webpack --config=webpack.config.js",
     "start": "webpack-dev-server --port 8080"
   }
 }
