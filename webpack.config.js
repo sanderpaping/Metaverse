@@ -17,7 +17,6 @@ module.exports = {
     devServer: {
         // host: "0.0.0.0",
         allowedHosts: "all",
-        public: 'https://metaverse-sigbar-q3xo5.ondigitalocean.app/metaverse2',
         port: 8080, //port that we're using for local host (localhost:8080)
         static: path.resolve(__dirname, "public"), //tells webpack to serve from the public folder
         hot: true,
