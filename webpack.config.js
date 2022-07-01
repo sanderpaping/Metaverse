@@ -1,7 +1,5 @@
 const path = require("path");
-const fs = require("fs");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const appDirectory = fs.realpathSync(process.cwd());
 
 module.exports = {
     // entry: path.resolve(appDirectory, "src/App.ts"), //path to the main .ts file
@@ -16,16 +14,16 @@ module.exports = {
     resolve: {
         extensions: [".tsx", ".ts", ".js"],
     },
-    devServer: {
-        host: "0.0.0.0",
-        allowedHosts: "all",
-        port: 8080, //port that we're using for local host (localhost:8080)
-        static: path.resolve(__dirname, "public"), //tells webpack to serve from the public folder
-        hot: true,
-        devMiddleware: {
-            publicPath: "/",
-        }
-    },
+    // devServer: {
+    //     host: "0.0.0.0",
+    //     allowedHosts: "all",
+    //     port: 8080, //port that we're using for local host (localhost:8080)
+    //     static: path.resolve(__dirname, "public"), //tells webpack to serve from the public folder
+    //     hot: true,
+    //     devMiddleware: {
+    //         publicPath: "/",
+    //     }
+    // },
     module: {
         rules: [
             {
@@ -49,7 +47,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             inject: true,
-            template: path.resolve(appDirectory, "public/index.html"),
+            template: path.resolve(__dirname, "public/index.html"),
         })
     ],
     mode: "development",
