@@ -2,12 +2,10 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-    entry: {
-      app: './src/App.ts',
-    },
+    entry:  path.join(__dirname, "src", "App.ts"),
     output: {
         filename: '[name].bundle.js', //name for the js file that is created/compiled in memory
-        path: path.resolve(__dirname, 'dist'),
+        path: path.join(__dirname, 'dist'),
         clean: true,
     },
     resolve: {
@@ -17,7 +15,7 @@ module.exports = {
         host: "0.0.0.0",
         allowedHosts: "all",
         port: 8080, //port that we're using for local host (localhost:8080)
-        static: path.resolve(__dirname, "public"), //tells webpack to serve from the public folder
+        static: path.join(__dirname, "public"), //tells webpack to serve from the public folder
         hot: true,
         devMiddleware: {
             publicPath: "/",
@@ -46,7 +44,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             inject: true,
-            template: path.resolve(__dirname, "public/index.html"),
+            template: path.join(__dirname, "public", "index.html"),
         })
     ],
     mode: "development",
